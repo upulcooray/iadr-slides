@@ -1,0 +1,14 @@
+---
+title: "IADR"
+author: "upulcooray"
+date: "2021-06-22"
+output: workflowr::wflow_html
+editor_options:
+  chunk_output_type: console
+---
+
+## Presentation
+
+<iframe width='400px' height='400px' src='iadertest.html' >
+  <p>Your browser does not support iframes</p>
+</iframe>
