@@ -1,4 +1,4 @@
-# Slides
+# iadr-slides
 
 A [workflowr][] project.
 

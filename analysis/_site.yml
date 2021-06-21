@@ -1,7 +1,7 @@
-name: Slides
+name: iadr-slides
 output_dir: ../docs
 navbar:
-  title: Slides
+  title: iadr-slides
   left:
   - text: Home
     href: index.html
