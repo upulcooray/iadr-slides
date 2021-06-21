@@ -12,7 +12,7 @@ navbar:
   right:
   - icon: fa-github
     text: Source code
-    href: https://github.com/IADR-slides/Slides
+    href: https://github.com/IADR-slides/iadr-slides
 output:
   workflowr::wflow_html:
     toc: yes
