@@ -1,0 +1,69 @@
+<!--Hat-tip: https://www.garrickadenbuie.com/blog/xaringan-tip-logo-all-slides/-->
+<style>
+.logo {
+  background-image: url(img/tu.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 0.1em;
+  right: 0.1em;
+  width: 110px;
+  height: 128px;
+  z-index: 0;
+}
+</style>
+
+<style>
+.logo2 {
+  background-image: url(img/iadr-logo.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  bottom: -2em;
+  left:  1em;
+  width: 150px;
+  height: 128px;
+  z-index: 0;
+}
+</style>
+
+<style>
+.my-line {
+  height:             1px;
+  display:            block;
+  border:             none;
+  background-color:   #C417AA;
+  position: absolute;
+  top: 95%;
+  left: 4.5em;
+  right: 80px;
+
+}
+</style>
+
+
+
+
+<script>
+document
+  .querySelectorAll(
+    '.remark-slide-content' +
+    ':not(.title-slide)' +
+    // add additional classes to exclude here, e.g.
+    ':not(.inverse)' +
+    ':not(.hide-logo)'
+  )
+  .forEach(el => {
+    el.innerHTML += '<div class="logo"></div>'+       /*Tohoku university logo*/
+                    '<div class="logo2"></div>'+      /*IADR  logo*/
+                    '<hr class="my-line" />' ;        /* Thin horizontal line in the bottom */
+  });
+</script>
+
+
+
+
+
+
+
+
