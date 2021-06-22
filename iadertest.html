@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Oral Health &amp; General Health Association</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Upul Cooray, J. Aida, R.G Watt, G. Tsakos, A. Heilmann, T. Yamamoto, K. Osaka" />
+    <script src="libs/header-attrs-2.8/header-attrs.js"></script>
+    <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
+    <link href="libs/tile-view-0.2.6/tile-view.css" rel="stylesheet" />
+    <script src="libs/tile-view-0.2.6/tile-view.js"></script>
+    <link href="libs/animate.css-3.7.2/animate.xaringan.css" rel="stylesheet" />
+    <link href="libs/tachyons-4.12.0/tachyons.min.css" rel="stylesheet" />
+    <script src="libs/clipboard-2.0.6/clipboard.min.js"></script>
+    <link href="libs/shareon-1.4.1/shareon.min.css" rel="stylesheet" />
+    <script src="libs/shareon-1.4.1/shareon.min.js"></script>
+    <link href="libs/xaringanExtra-shareagain-0.2.6/shareagain.css" rel="stylesheet" />
+    <script src="libs/xaringanExtra-shareagain-0.2.6/shareagain.js"></script>
+    <link rel="stylesheet" href="css/nhsr.css" type="text/css" />
+    <link rel="stylesheet" href="css/nhsr-fonts.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+
+
+
+
+class: title-slide, left, bottom
+
+
+# Oral Health &amp; General Health Association
+&lt;hr&gt;            &lt;!-- horizontal line --&gt; 
+
+### .blue[**Using Machine Learning Prediction Algorithms**]
+#### _Upul Cooray, J. Aida, R.G Watt, G. Tsakos, A. Heilmann, T. Yamamoto, K. Osaka_
+.date[.grey[ 📅 _21 July 2021_ 🗾 _Sendai,Japan_]]
+
+???
+Hello everyone!! My name is Upul Cooray. I am 3rd year PhD student in Tohoku University, Japan.
+Here I will present how we examined the robustness of the association between oral health and general health using machine learning prediction algorithms.
+
+---
+class: inverse, middle, center
+
+# INTRODUCTION
+&lt;hr&gt;
+
+---
+class: one
+
+# INTRODUCTION
+&lt;hr&gt;
+
+* Conventionally, .green[Oral Health] and .green[General Health] are treated as 
+separate entities within health care systems.
+--
+
+* This separation exist in training personals, allocating resources, delivery of primary health care...etc.
+--
+
+* However, the link between oral  health and general health has been studied for decades.
+--
+
+* Research related to oral health and general health associations fall into 4 main categories.
+
+---
+# INTRODUCTION
+&lt;hr&gt;
+.one[* Research related to oral health and general health associations fall into 4 main categories.]
+
+--
+1. Related to oral manifestations of systemic disease
+--
+
+1. Related to-chemical links between oral infections and systemic diseases
+--
+
+1. Related to mediating effect of nutrition on the association between oral health and general health
+--
+
+1. Related to common risk factors of oral and general health problems.
+
+---
+class: inverse, middle, center
+
+# HYPOTHESIS
+&lt;hr&gt;
+## "Intuition"
+---
+
+
+---
+&lt;!-- .pull-left[ --&gt;
+&lt;!-- ![](./img/body-xray.png)] --&gt;
+
+&lt;!-- .pull-right.w-50[ --&gt;
+&lt;!-- ![](./img/oral-xray2.jpg)] --&gt;
+
+&lt;!-- .w-30[ --&gt;
+&lt;!-- ![](./img/iadr-logo.png)] --&gt;
+
+--
+
+&lt;!-- .w-30.fixed.right-1.bottom-1[ --&gt;
+&lt;!-- ![](./img/iadr-logo.png)] --&gt;
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "googlecode",
+"highlightLines": true,
+"highlightLanguage": "r",
+"countIncrementalSlides": false,
+"ratio": "14:9"
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+<!--Hat-tip: https://www.garrickadenbuie.com/blog/xaringan-tip-logo-all-slides/-->
+<style>
+.logo {
+  background-image: url(img/tu.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 0.1em;
+  right: 0.1em;
+  width: 110px;
+  height: 128px;
+  z-index: 0;
+}
+</style>
+
+<style>
+.logo2 {
+  background-image: url(img/iadr-logo.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  bottom: -2em;
+  left:  1em;
+  width: 150px;
+  height: 128px;
+  z-index: 0;
+}
+</style>
+
+<style>
+.my-line {
+  height:             1px;
+  display:            block;
+  border:             none;
+  background-color:   #C417AA;
+  position: absolute;
+  top: 95%;
+  left: 4.5em;
+  right: 80px;
+
+}
+</style>
+
+
+
+
+<script>
+document
+  .querySelectorAll(
+    '.remark-slide-content' +
+    ':not(.title-slide)' +
+    // add additional classes to exclude here, e.g.
+    ':not(.inverse)' +
+    ':not(.hide-logo)'
+  )
+  .forEach(el => {
+    el.innerHTML += '<div class="logo"></div>'+       /*Tohoku university logo*/
+                    '<div class="logo2"></div>'+      /*IADR  logo*/
+                    '<hr class="my-line" />' ;        /* Thin horizontal line in the bottom */
+  });
+</script>
+
+
+
+
+
+
+
+
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
