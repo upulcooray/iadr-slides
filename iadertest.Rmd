@@ -46,6 +46,8 @@ class: title-slide, left, bottom
 # `r rmarkdown::metadata$title`
 <hr>            <!-- horizontal line --> 
 
+.item.absolute.right-2.top-0-ns[text box]
+
 ### .blue[**`r rmarkdown::metadata$subtitle`**]
 #### _`r rmarkdown::metadata$author`_
 .date[.grey[ `r "\U1F4C5"` _21 July 2021_ `r "\U1F5FE"` _Sendai,Japan_]]
@@ -101,20 +103,45 @@ class: inverse, middle, center
 # HYPOTHESIS
 <hr>
 ## "Intuition"
----
-
 
 ---
-<!-- .pull-left[ -->
-<!-- ![](./img/body-xray.png)] -->
 
-<!-- .pull-right.w-50[ -->
-<!-- ![](./img/oral-xray2.jpg)] -->
+background-image: url("./img/img1.svg")
+background-position: 50% 30%
+background-size: cover
 
-<!-- .w-30[ -->
-<!-- ![](./img/iadr-logo.png)] -->
+# HYPOTHESIS
+<hr>
+
+---
+background-image: url("./img/img2.svg")
+background-position: 50% 30%
+background-size: cover
+
+# HYPOTHESIS
+<hr>
+
+---
+
+background-image: url("./img/img3.svg")
+background-position: 50% 30%
+background-size: cover
+
+# HYPOTHESIS
+<hr>
+
+---
+![](./img/step4.svg)
 
 --
 
-<!-- .w-30.fixed.right-1.bottom-1[ -->
-<!-- ![](./img/iadr-logo.png)] -->
+.pull-right.w-50[
+![](./img/oral-xray2.jpg)]
+
+.w-30[
+![](./img/iadr-logo.png)]
+
+--
+
+.w-30.fixed.right-1.bottom-1[
+![](./img/step4.svg)]
