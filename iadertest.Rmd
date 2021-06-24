@@ -46,7 +46,7 @@ class: title-slide, left, bottom
 # `r rmarkdown::metadata$title`
 <hr>            <!-- horizontal line --> 
 
-.item.absolute.right-2.top-0-ns[text box]
+.item[text box]
 
 ### .blue[**`r rmarkdown::metadata$subtitle`**]
 #### _`r rmarkdown::metadata$author`_
