@@ -255,7 +255,8 @@ blockquote {
 .content-box-green,
 .content-box-purple,
 .content-box-red,
-.content-box-yellow {
+.content-box-yellow,
+.content-box-noboader{
     border-radius: 15px;
     margin: 0 0 25px;
     overflow: hidden;
@@ -306,10 +307,24 @@ blockquote {
 	background-color: #f9dbdb;
 }
 
-.content-box-yellow {
-	background-color: #fef5c4;
+.content-box-noboader {
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 5px;
+  margin-bottom: 1em;
+
+
 }
 
+
+.content-box-yellow {
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 5px;
+  margin-bottom: 0.1em;
+  border: 5px solid green;
+
+}
 
 .full-width {
     display: flex;
@@ -318,4 +333,18 @@ blockquote {
 }
 
 
+.pull-left {
+  float: left;
+  width: 49%;
+}
+
+.pull-right {
+  float: right;
+  width: 49%;
+}
+
+
+.text-cen{
+  text-align: center;
+}
 

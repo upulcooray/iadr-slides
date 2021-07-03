@@ -17,7 +17,7 @@ output:
       highlightLines: true
       highlightLanguage: ["r"]
       countIncrementalSlides: false
-      ratio: "14:9"
+      ratio: "16:9"
     includes:
       after_body: [css/insert-logo.html]
 ---
@@ -33,10 +33,13 @@ opts_chunk$set(echo = FALSE,
                fig.height = 4,
                dpi = 300)
 
-xaringanExtra::use_xaringan_extra(c("tile_view", "animate_css", "tachyons", "share_again"))
+xaringanExtra::use_xaringan_extra(c("tile_view", "animate_css", "tachyons", 
+                                    "share_again","webcam"))
 
 xaringanExtra::style_share_again(
   share_buttons = c("twitter", "linkedin"))
+
+xaringan::moon_reader()
 
 ```
 
@@ -46,7 +49,6 @@ class: title-slide, left, bottom
 # `r rmarkdown::metadata$title`
 <hr>            <!-- horizontal line --> 
 
-.item[text box]
 
 ### .blue[**`r rmarkdown::metadata$subtitle`**]
 #### _`r rmarkdown::metadata$author`_
@@ -89,7 +91,7 @@ separate entities within health care systems.
 1. Related to oral manifestations of systemic disease
 --
 
-1. Related to-chemical links between oral infections and systemic diseases
+1. Related to biochemical links between oral infections and systemic diseases
 --
 
 1. Related to mediating effect of nutrition on the association between oral health and general health
@@ -131,17 +133,161 @@ background-size: cover
 <hr>
 
 ---
-![](./img/step4.svg)
+
+background-image: url("./img/img5.svg")
+background-position: 100px 100px
+background-size: 80% 60%
+
+
+# HYPOTHESIS
+<hr>
+<br><br><br><br><br><br><br><br><br><br>
+.center[If the __oral health__ and __general health__ are robustly associated, .blue[oral health indicators] should be able to predict .blue[general health] and the .green[general health indicators] should be able to predict .green[oral health].]
+
+---
+class: inverse, middle, center
+
+# Methods
+<hr>
+## "Prediction model"
+
+---
+
+# Methods
+<hr>
 
 --
 
-.pull-right.w-50[
-![](./img/oral-xray2.jpg)]
-
-.w-30[
-![](./img/iadr-logo.png)]
+__Data source:__ Japanese Gerontological Evaluation Study 2016 (JAGES)
 
 --
 
-.w-30.fixed.right-1.bottom-1[
-![](./img/step4.svg)]
+__Number of participants:__ 19,862 participants aged 65 years or older
+
+--
+
+
+.pull-left[.content-box-yellow[.purple[Outcome 1: self-rated poor oral health]
+__Predictors set 1:__
+- frailty
+- psychological status
+- comorbidity
+- Self-rated general health
+- .grey[age/ sex/ income/ smoking]]]
+
+--
+
+.pull-right[.content-box-yellow[.purple[Outcome 2: self-rated poor general health]
+__Predictors set 2:__
+- poor occlusion
+- chewing difficulty
+- dry mouth
+- Self-rated oral health
+- .grey[age/ sex/ income/ smoking]]]
+
+
+---
+
+# Methods
+<hr>
+
+--
+
+__Prediction algorithm:__ Extreme gradient boosting (XGBoost) classification .pl7[algorithm] 
+
+--
+
+__Model evaluation:__ Ten fold cross-validation
+
+--
+
+__Evaluation matrices:__ Accuracy/ C-statistics (AUC)
+
+--
+
+__Model explanations:__ Shapley Additive explanations (SHAP) values
+
+
+---
+
+class: inverse, middle, center
+
+# Results
+<hr>
+
+
+---
+# Results
+<hr>
+
+--
+
+__Descriptive results:__
+
+- Prevalence of self-rated poor oral health = __28.6%__ (5,677/19,862)
+- Prevalence of self-rated poor general health = __20.6%__ (2,455/19,862)
+- __47.7%__ of the people with poor general health also reported poor oral health
+
+--
+
+.pull-left[__Results of prediction model:__
+- General health indicators predicted poor oral health;
+  * Accuracy: 74.8%`r "\U2213"` 0.1
+  * AUC: 76.0%`r "\U2213"` 0.1]
+
+--
+
+.pull-right[
+<br>
+- Oral health indicators predicted poor general health;
+  * Accuracy: 84.7%`r "\U2213"` 0.6
+  * AUC: 85.5%`r "\U2213"` 0.6]
+
+---
+
+background-image: url("./img/fig-GH.png")
+background-position: 50% 76%
+background-size: 75% 75%
+
+
+# Results .grey[(Predicting poor general health)]
+<hr>
+
+---
+
+background-image: url("./img/fig-OH.png")
+background-position: 50% 76%
+background-size: 75% 75%
+
+
+# Results .grey[(Predicting poor oral health)]
+<hr>
+
+---
+
+class: inverse, middle, center
+
+# Conclusion
+<hr>
+
+# `r "\U1F4A1"`
+
+---
+
+# Conclusion
+<hr>
+<br>
+
+.center[Oral health to general health and vice-versa indicate a existence of a .purple[__robust association__] between Oral Health and General Health. Therefore, __oral health and general health should be considered collectively__ when planning healthcare for older adults.]
+
+---
+
+class: inverse, middle, center
+
+# Thank you!
+<hr>
+
+# `r "\U1F64F"`
+
+![](./img/iadr-logo.png)
+
