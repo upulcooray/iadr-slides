@@ -298,7 +298,7 @@ class: inverse, middle, center
 <hr>
 <br>
 
-accurate predictions on .center[Oral health to general health and vice-versa association  indicate a existence of a .purple[__robust association__] between Oral Health and General Health. Therefore, __oral health and general health should be considered collectively__ when planning healthcare for older adults.]
+.center[Accurate predictions on Oral health to general health and vice-versa association  indicate a existence of a .purple[__robust association__] between Oral Health and General Health. Therefore, __oral health and general health should be considered collectively__ when planning healthcare for older adults.]
 
 ---
 
