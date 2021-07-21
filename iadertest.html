@@ -39,7 +39,7 @@ class: title-slide, left, bottom
 
 ???
 Hello everyone!! My name is Upul Cooray. I am 3rd year PhD student in Tohoku University, Japan.
-Here In this  will present how we examined the robustness of the association between oral health and general health using machine learning prediction algorithms.
+In this precentation i  will talk about how we examined the robustness of the association between oral health and general health using a machine learning prediction algorithm.
 
 ---
 class: inverse, middle, center
@@ -69,22 +69,32 @@ separate entities within health care systems.
 
 
 
+
 ---
 # INTRODUCTION
 &lt;hr&gt;
 .one[* Research related to oral health and general health associations fall into 4 main categories.]
 
 --
-1. Related to oral manifestations of systemic disease
+1. oral manifestations of systemic diseases
 --
 
-1. Related to biochemical links between oral infections and systemic diseases
+1. biochemical links between oral infections and systemic diseases
+
+???
+
+Bio chemical links such as the association between periodontal disease and CVD
+
 --
 
-1. Related to mediating effect of nutrition on the association between oral health and general health
+1. mediating effect of nutrition on the association between oral health and general health
 --
 
-1. Related to common risk factors of oral and general health problems.
+1. common risk factors of oral and general health problems.
+
+???
+
+factors such as diet , socio-economic , demographic 
 
 ---
 class: inverse, middle, center
@@ -165,6 +175,9 @@ class: inverse, middle, center
 
 __Data source:__ Japanese Gerontological Evaluation Study 2016 (JAGES)
 
+???
+JAges is nationwide epidemiological survey for community dwelling older adults age 65 years or older 
+
 --
 
 __Number of participants:__ 19,862 participants aged 65 years or older
@@ -177,8 +190,8 @@ __Predictors set 1:__
 - frailty
 - psychological status
 - comorbidity
-- Self-rated general health
 - .grey[age/ sex/ income/ smoking]]]
+
 
 --
 
@@ -187,7 +200,6 @@ __Predictors set 2:__
 - poor occlusion
 - chewing difficulty
 - dry mouth
-- Self-rated oral health
 - .grey[age/ sex/ income/ smoking]]]
 
 
@@ -199,6 +211,9 @@ __Predictors set 2:__
 
 __Prediction algorithm:__ Extreme gradient boosting (XGBoost) classification .pl7[algorithm] 
 
+???
+we used xgboost as it is well-known for its high efficincy and accuracy
+
 --
 
 __Model evaluation:__ Ten fold cross-validation
@@ -207,10 +222,17 @@ __Model evaluation:__ Ten fold cross-validation
 
 __Evaluation matrices:__ Accuracy/ C-statistics (AUC)
 
+???
+
+We evaluated the models using accuracy and auc score
+
 --
 
 __Model explanations:__ Shapley Additive explanations (SHAP) values
 
+???
+In addition we used shaply additive explanation values which is well-known framework for explainable machine learning.
+we used values to investigate how each predictor behaved in predicting their respective outcome
 
 ---
 
@@ -248,7 +270,7 @@ __Descriptive results:__
 
 ---
 
-background-image: url("./img/fig-GH.png")
+background-image: url("./img/fig-GH.svg")
 background-position: 50% 76%
 background-size: 75% 75%
 
@@ -256,9 +278,15 @@ background-size: 75% 75%
 # Results .grey[(Predicting poor general health)]
 &lt;hr&gt;
 
+
+???
+here is the summary of SHAP analsis for perdicting general health using oral health predictors
+we observed that lower household income, older age , and having chewing difficulty as the 
+most important predictors in predicting poor general health
+
 ---
 
-background-image: url("./img/fig-OH.png")
+background-image: url("./img/fig-OH.svg")
 background-position: 50% 76%
 background-size: 75% 75%
 
@@ -266,31 +294,41 @@ background-size: 75% 75%
 # Results .grey[(Predicting poor oral health)]
 &lt;hr&gt;
 
+
+???
+This figure shows the summary of SHAP analsis for perdicting poor oral health using general health predictors
+here we observed that higher frailty scores, younger age , lower household income, and depression as the 
+most important predictors in predicting poor oral health
+
+
 ---
 
 class: inverse, middle, center
 
-# Conclusion
+# Conclusions
 &lt;hr&gt;
 
 # 💡
 
 ---
 
-# Conclusion
+# Conclusions
 &lt;hr&gt;
 &lt;br&gt;
 
-.center[Accurate predictions on Oral health to general health and vice-versa association  indicate a existence of a .purple[__robust association__] between Oral Health and General Health. Therefore, __oral health and general health should be considered collectively__ when planning healthcare for older adults.]
+.center[Accurate predictions on oral health to general health and vice-versa association  indicate a existence of a .purple[__robust association__] between Oral Health and General Health. Therefore, __oral health and general health should be considered collectively__ when planning health care for older adults.
+
+Furthermore, SHAP analysis indicated the importance of socio-economic factors such as __household income__ in predicting both oral health and general health indicating the importance of tackling __social determinants__ to improve overall well-being.]
+
+
 
 ---
 
 class: inverse, middle, center
 
-# Thank you!
+# Thank you!  🙏
 &lt;hr&gt;
 
-# 🙏
 
 ![](./img/iadr-logo.png)
 
